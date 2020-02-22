@@ -10,8 +10,8 @@ test('renders the PlayerCards component div', () => {
   const { getByTestId } = render(<PlayerCards />);
 
   // Act
-  const Cards = getByTestId(/PlayerCards/i);
+  const cards = getByTestId(/PlayerCards/i);
 
   // Assert
-  expect(Cards).toBeInTheDocument();
+  expect(cards).toBeInTheDocument();
 })
