@@ -11,7 +11,7 @@ const Toggle = () => {
 
   return (
     <div data-testid='toggle'>
-      <button onClick={handleClick}>
+      <button onClick={handleClick} data-testid='button'>
         {isStateful ? "Stateless" : "Stateful"}
       </button>
     </div>

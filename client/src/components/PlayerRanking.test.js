@@ -4,7 +4,7 @@ import PlayerRanking from './PlayerRanking';
 import { fireEvent, render, cleanup, act } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 
-// App div
+// Test the PlayerRanking component
 test('renders the PlayerRanking component div', () => {
   // Arrange
   const { getByTestId } = render(<PlayerRanking />);

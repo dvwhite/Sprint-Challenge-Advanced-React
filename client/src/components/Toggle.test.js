@@ -4,7 +4,7 @@ import Toggle from './Toggle';
 import { fireEvent, render, cleanup, act } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 
-// App div
+// Test toggle component
 test('renders the Toggle component div', () => {
   // Arrange
   const { getByTestId } = render(<Toggle />);
@@ -14,4 +14,18 @@ test('renders the Toggle component div', () => {
 
   // Assert
   expect(toggle).toBeInTheDocument();
+})
+
+test('is clickable', () => {
+  // Arrange
+  const spy = jest.fn();
+  const { getByTestId } = render(<Toggle />);
+
+  // Act
+  const button = getByTestId(/button/i);
+  button.onclick = spy;
+  fireEvent.click(button);
+
+  // Assert
+  expect(spy).toHaveBeenCalledTimes(1);
 })

@@ -4,7 +4,7 @@ import PlayerCards from './PlayerCards';
 import { fireEvent, render, cleanup, act } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 
-// App div
+// Test the PlayerCards component
 test('renders the PlayerCards component div', () => {
   // Arrange
   const { getByTestId } = render(<PlayerCards />);
