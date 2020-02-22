@@ -10,7 +10,7 @@ const Toggle = () => {
   }
 
   return (
-    <div>
+    <div data-testid='toggle'>
       <button onClick={handleClick}>
         {isStateful ? "Stateless" : "Stateful"}
       </button>

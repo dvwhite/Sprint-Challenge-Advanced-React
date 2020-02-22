@@ -10,13 +10,26 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-describe('renders the App div', () => {
+// App div
+test('renders the App div', () => {
   // Arrange
-  const { getByTestId } = render(<App />)
+  const { getByTestId } = render(<App />);
 
   // Act
-  const appDiv = getByTestId(/App-div/i)
+  const appDiv = getByTestId(/App-div/i);
 
   // Assert
   expect(appDiv).toBeInTheDocument();
+})
+
+// Toggle component
+test('renders the Toggle components', () => {
+  // Arrange
+  const { getByTestId } = render(<App />);
+
+  // Act
+  const toggle = getByTestId(/toggle/i);
+
+  // Assert
+  expect(toggle).toBeInTheDocument();
 })

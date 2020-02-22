@@ -54,7 +54,7 @@ class PlayerRanking extends React.Component {
 
   render () {
     return (
-      <Cards>
+      <Cards data-testid='PlayerRanking'>
         {
           this.state.players.length > 0 ? 
             this.state.players.map(player => (

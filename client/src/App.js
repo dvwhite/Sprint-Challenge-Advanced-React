@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App" data-testid='App-div'>
       {
-       isStateful ? <PlayerRanking data-testid='PlayerRanking'/> : <PlayerCards data-testid='PlayerCards'/>
+       isStateful ? <PlayerRanking /> : <PlayerCards />
       }
-      <Toggle data-testid='Toggle'/>
+      <Toggle />
     </div>
   );
 }

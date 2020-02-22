@@ -44,7 +44,7 @@ const PlayerCards = (props) => {
   if (!data) return <h2>Loading...</h2>
 
   return (
-    <Cards>
+    <Cards data-testid='PlayerCards'>
       {console.log("data:", data)}
       {
         Array.isArray(data) ? 
