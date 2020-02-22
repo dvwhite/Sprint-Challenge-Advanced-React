@@ -8,11 +8,11 @@ import useLocalStorage from './hooks/useLocalStorage';
 function App() {
   const [isStateful, setIsStateful] = useLocalStorage('isStateful', false);
   return (
-    <div className="App">
+    <div className="App" data-testid='App-div'>
       {
-       isStateful ? <PlayerRanking /> : <PlayerCards />
+       isStateful ? <PlayerRanking data-testid='PlayerRanking'/> : <PlayerCards data-testid='PlayerCards'/>
       }
-      <Toggle />
+      <Toggle data-testid='Toggle'/>
     </div>
   );
 }
