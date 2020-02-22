@@ -1,9 +1,11 @@
 import React from 'react';
-import useData from './../hooks/useData';
-import PlayerCard from './PlayerCard';
 import axios from 'axios';
 import styled from 'styled-components';
 
+// Component imports
+import PlayerCard from './PlayerCard';
+
+// Styled components
 const Cards = styled.div`
   background: url("https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -56,7 +58,11 @@ class PlayerRanking extends React.Component {
         {
           this.state.players.length > 0 ? 
             this.state.players.map(player => (
-              <PlayerCard data={player} />
+              <PlayerCard 
+                data={player} 
+                color='black' 
+                bgColor='white'
+              />
             ))
             : null
         }

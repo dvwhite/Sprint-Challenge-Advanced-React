@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import useLocalStorage from './../hooks/useLocalStorage';
 
 const Card = styled.div`
   margin: 1%;
-  background-color: #333;
-  color: #fff;
   opacity: 0.95;
   border: 0;
   border-radius: 10px;
@@ -27,9 +26,15 @@ Player shape should look like:
   }
 */
 
-const PlayerCard = ({ data }) => {
+const PlayerCard = ({ data, color, bgColor }) => {
+  const [isStateful, setIsStateful] = useLocalStorage('isStateful', false);
+  
+  useEffect(() => {
+
+  }, [])
+
   return (
-    <Card id={data.id}>
+    <Card id={data.id} style={{"background-color": bgColor, "color": color}}>
       <h2>{data.name}</h2>
       <p>Searches: {data.searches}</p> 
       <p>Country: {data.country}</p>
