@@ -22,6 +22,18 @@ test('renders the App div', () => {
   expect(appDiv).toBeInTheDocument();
 })
 
+// App div
+test('renders the PlayerCards or PlayerRanking div', () => {
+  // Arrange
+  const { getByTestId } = render(<App />);
+
+  // Act
+  const playerComponent = getByTestId(/playercomponent/i);
+
+  // Assert
+  expect(playerComponent).toBeInTheDocument();
+})
+
 // Toggle component
 test('renders the Toggle components', () => {
   // Arrange

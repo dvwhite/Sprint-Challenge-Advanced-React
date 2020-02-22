@@ -9,9 +9,11 @@ function App() {
   const [isStateful, setIsStateful] = useLocalStorage('isStateful', false);
   return (
     <div className="App" data-testid='App-div'>
-      {
-       isStateful ? <PlayerRanking /> : <PlayerCards />
-      }
+      <div data-testid='PlayerComponent'>
+        {
+          isStateful ? <PlayerRanking /> : <PlayerCards />
+        }
+      </div>
       <Toggle />
     </div>
   );
