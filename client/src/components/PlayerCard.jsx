@@ -34,10 +34,10 @@ const PlayerCard = ({ data, color, bgColor }) => {
   }, [])
 
   return (
-    <Card id={data.id} style={{"background-color": bgColor, "color": color}}>
-      <h2>{data.name}</h2>
-      <p>Searches: {data.searches}</p> 
-      <p>Country: {data.country}</p>
+    <Card id={data?.id} style={{"backgroundColor": bgColor, "color": color}}>
+      <h2 data-testid='name'>{data?.name}</h2>
+      <p>Searches: {data?.searches}</p> 
+      <p>Country: {data?.country}</p>
     </Card>
   );
 }
