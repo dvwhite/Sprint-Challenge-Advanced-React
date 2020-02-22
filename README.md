@@ -23,9 +23,19 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+_David_: Class components use familiar ES6 class syntax and are handy when you need to access and manage component level state without worrying about passing it down as props. There may be some situations where you need to use lifecycle methods.
+
 - [ ] Name three lifecycle methods and their purposes.
+_David_: 
+     1. render: This method renders the application
+     2. componentDidMount: This runs when the component initial mounts only. It is used, for instance, to request data from an API for example, and set it to state, only once.
+     3. componentDidUpdate: This runs every time the component updates, and unlike useEffect, there is no dependency array that controls what triggers the update. This can be used whenever you need to execute code on every update.
+
 - [ ] What is the purpose of a custom hook?
+_David_: A custom hook allows the developer to leverage the power of React hooks and to compose several hooks together, such as the state hook. You can author your own hook to accomplish more than existing hooks could, designing it to make your code more DRY and to integrate functionality of different modular pieces of code.
+
 - [ ] Why is it important to test our apps?
+_David_: Testing helps ensure the app runs without errors. Unit tests are the most modular and smallest unit of testing. Good unit test coverage ensures that an app functions before and after changes to the code. This reduces the time that would be spent on manually testing and also acts as another form of documentation for how the code should function.
 
 ## Project Set Up
 
