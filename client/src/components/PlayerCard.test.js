@@ -4,7 +4,6 @@ import PlayerCard from './PlayerCard';
 import { fireEvent, render, cleanup, act } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 
-
 // Test that player ranking cards have name text
 test ('renders the player cards', () => {
   // Arrange

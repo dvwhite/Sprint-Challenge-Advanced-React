@@ -25,14 +25,8 @@ Player shape should look like:
     id: 0
   }
 */
-
 const PlayerCard = ({ data, color, bgColor }) => {
   const [isStateful, setIsStateful] = useLocalStorage('isStateful', false);
-  
-  useEffect(() => {
-
-  }, [])
-
   return (
     <Card id={data?.id} style={{"backgroundColor": bgColor, "color": color}}>
       <h2 data-testid='name'>{data?.name}</h2>
