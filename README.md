@@ -27,7 +27,7 @@ _David_: Class components use familiar ES6 class syntax and are handy when you n
 
 - [ ] Name three lifecycle methods and their purposes.
 _David_: 
-     1. render: This method renders the application
+     1. render: This method renders the application to the virtual DOM, displaying it in the web browser so that the user can view it
      2. componentDidMount: This runs when the component initial mounts only. It is used, for instance, to request data from an API for example, and set it to state, only once.
      3. componentDidUpdate: This runs every time the component updates, and unlike useEffect, there is no dependency array that controls what triggers the update. This can be used whenever you need to execute code on every update.
 
