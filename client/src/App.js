@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PlayerRanking from './components/PlayerRanking';
+import PlayerCards from './components/PlayerCards';
+import Toggle from './components/Toggle';
+import useLocalStorage from './hooks/useLocalStorage';
 
 function App() {
+  const [isStateful, setIsStateful] = useLocalStorage('isStateful', false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" data-testid='App-div'>
+      <div data-testid='PlayerComponent'>
+        {
+          isStateful ? <PlayerRanking /> : <PlayerCards />
+        }
+      </div>
+      <Toggle />
     </div>
   );
 }
